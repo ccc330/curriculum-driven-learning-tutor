@@ -293,7 +293,7 @@ def get_api_config():
     """从环境变量获取API配置"""
     api_key = os.getenv('DASHSCOPE_API_KEY', 'sk-9abb3f33c72440f488d9b470ab701d39')  # 默认值仅用于开发
     base_url = os.getenv('DASHSCOPE_BASE_URL', 'https://dashscope.aliyuncs.com/compatible-mode/v1')
-    model_name = os.getenv('MODEL_NAME', 'Moonshot-Kimi-K2-Instruct')
+    model_name = os.getenv('MODEL_NAME', 'qwen3-30b-a3b-instruct-2507')
     return api_key, base_url, model_name
 
 # 创建学习导师实例
