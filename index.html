@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程主导型学习导师系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: #4facfe;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .feature-card ul {
+            list-style-type: none;
+        }
+
+        .feature-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-card li:before {
+            content: "✓";
+            color: #4facfe;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 30px;
+            background: #f0f8ff;
+            border-radius: 15px;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: bold;
+            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(79, 172, 254, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(0);
+        }
+
+        .instructions {
+            background: #fff8e1;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 20px;
+        }
+
+        .instructions h3 {
+            color: #ff9800;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .instructions ol {
+            padding-left: 20px;
+        }
+
+        .instructions li {
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        .instructions code {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 课程主导型学习导师系统</h1>
+            <p>基于通义千问模型的智能学习辅导系统</p>
+        </div>
+        
+        <div class="content">
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🤖 智能学习辅导</h3>
+                    <ul>
+                        <li>基于通义千问模型，提供专业的学习指导</li>
+                        <li>采用课程主导型教学流程，系统化学习体验</li>
+                        <li>支持多轮对话和对话历史管理</li>
+                        <li>个性化学习路径规划</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>📄 文件处理能力</h3>
+                    <ul>
+                        <li>支持多种文件格式：TXT、PDF、DOCX、DOC、MD</li>
+                        <li>异步文件处理，支持大文件上传（最大16MB）</li>
+                        <li>智能文本提取和内容分析</li>
+                        <li>自动生成学习计划</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>🎨 优秀用户体验</h3>
+                    <ul>
+                        <li>Markdown渲染：支持丰富的文本格式展示</li>
+                        <li>流式响应：实时显示AI回复，提升交互体验</li>
+                        <li>滚动控制：便捷的聊天记录导航功能</li>
+                        <li>响应式设计：适配不同屏幕尺寸</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>开始您的智能学习之旅</h2>
+                <p>点击下方按钮进入学习导师系统</p>
+                <button class="cta-button" onclick="enterSystem()">进入学习系统</button>
+            </div>
+            
+            <div class="instructions">
+                <h3>📌 部署说明</h3>
+                <ol>
+                    <li>确保已安装Python 3.7+环境</li>
+                    <li>安装项目依赖：<code>pip install -r requirements.txt</code></li>
+                    <li>配置环境变量：复制 <code>.env.example</code> 为 <code>.env</code> 并填入您的API密钥</li>
+                    <li>启动后端服务：<code>python backend_api.py</code></li>
+                    <li>在浏览器中打开 <code>learning_tutor_app.html</code> 或点击上方按钮</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 课程主导型学习导师系统 - 基于通义千问模型构建</p>
+        </div>
+    </div>
+
+    <script>
+        function enterSystem() {
+            // 检查后端服务是否运行
+            fetch('http://localhost:5000/api/new-conversation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // 后端服务正常，跳转到学习界面
+                    window.location.href = 'learning_tutor_app.html';
+                } else {
+                    // 后端服务异常，提示用户
+                    alert('后端服务未启动，请先启动后端服务：\n1. 打开终端\n2. 运行命令：python backend_api.py');
+                }
+            })
+            .catch(error => {
+                // 网络错误，提示用户启动后端服务
+                alert('无法连接到后端服务，请确保：\n1. 后端服务已启动（python backend_api.py）\n2. 服务运行在 http://localhost:5000');
+            });
+        }
+    </script>
+</body>
+</html>
